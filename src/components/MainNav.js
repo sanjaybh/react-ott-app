@@ -4,6 +4,7 @@ import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import TvIcon from "@material-ui/icons/Tv";
 import MovieIcon from "@material-ui/icons/Movie";
+import HelpIcon from "@material-ui/icons/Help";
 import SearchIcon from "@material-ui/icons/Search";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import { useHistory } from "react-router-dom";
@@ -32,6 +33,8 @@ export default function SimpleBottomNavigation() {
       history.push("/series");
     } else if (value === 3) {
       history.push("/search");
+    } else if (value === 4) {
+      history.push("/help");
     }
   }, [value, history]);
 
@@ -63,6 +66,11 @@ export default function SimpleBottomNavigation() {
         style={{ color: "white" }}
         label="Search"
         icon={<SearchIcon />}
+      />
+      <BottomNavigationAction
+        style={{ color: "white" }}
+        label="Help"
+        icon={<HelpIcon />}
       />
     </BottomNavigation>
   );
